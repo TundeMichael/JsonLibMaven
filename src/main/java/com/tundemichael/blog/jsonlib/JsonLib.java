@@ -22,7 +22,7 @@ public class JsonLib {
             System.out.println("Built with Gson --> " + buildWithGson());
             System.out.println("Built with Jackson --> " + buildWithJackson());
             System.out.println("Built with Primefaces --> " + buildWithPrimefaces());
-            System.out.println("Built with Java EE 7  --> " + buildWithJavaEE7());
+            System.out.println("Built with Java EE 7  --> " + buildWithJSONP());
         } catch (Exception e) {
             LOG.log(Level.SEVERE, null, e);
         }
@@ -67,7 +67,7 @@ public class JsonLib {
         return json.toString();
     }
 
-    public static String buildWithJavaEE7() {
+    public static String buildWithJSONP() {
         JsonObjectBuilder json = Json.createObjectBuilder();
         json.add("firstname", "John");
         json.add("lastname", "Doe");
