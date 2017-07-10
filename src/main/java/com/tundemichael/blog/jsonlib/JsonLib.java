@@ -19,6 +19,7 @@ public class JsonLib {
         try {
             System.out.println("================== Maven ====================");
             System.out.println("Built with Concated String --> " + buildWithConcatedString());
+            System.out.println("Built with String Builder --> " + buildWithStringBuilder());
             System.out.println("Built with Gson --> " + buildWithGson());
             System.out.println("Built with Jackson --> " + buildWithJackson());
             System.out.println("Built with Primefaces --> " + buildWithPrimefaces());
@@ -37,6 +38,48 @@ public class JsonLib {
                 + "\"email\":\"john@doe.com\""
                 + "}";
         return json;
+    }
+    
+    public static String buildWithStringBuilder() {
+        StringBuilder bd = new StringBuilder();
+        bd.append("{");
+        bd.append("\"");
+        bd.append("firstname");
+        bd.append("\"");
+        bd.append(":");
+        bd.append("\"");
+        bd.append("John");
+        bd.append("\"");
+        bd.append(",");
+        
+        bd.append("\"");
+        bd.append("lastname");
+        bd.append("\"");
+        bd.append(":");
+        bd.append("\"");
+        bd.append("Doe");
+        bd.append("\"");
+        bd.append(",");
+        
+        bd.append("\"");
+        bd.append("phone");
+        bd.append("\"");
+        bd.append(":");
+        bd.append("\"");
+        bd.append("234809xxxxxxxx");
+        bd.append("\"");
+        bd.append(",");
+        
+        bd.append("\"");
+        bd.append("email");
+        bd.append("\"");
+        bd.append(":");
+        bd.append("\"");
+        bd.append("john@example.com");
+        bd.append("\"");
+        
+        bd.append("}");
+        return bd.toString();
     }
 
     public static String buildWithGson() {
