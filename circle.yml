@@ -1,0 +1,8 @@
+machine:
+  timezone:
+    Africa/Lagos
+services:
+    - cassandra
+    - elasticsearch
+    - rabbitmq-server
+    - redis
